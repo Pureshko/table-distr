@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'development';
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   },
   assetPrefix: isProd ? '/table-distr/' : '',
   basePath: isProd ? '/table-distr' : '',
-  output: 'export'
+  output: 'export',
 };
 
 export default nextConfig;
